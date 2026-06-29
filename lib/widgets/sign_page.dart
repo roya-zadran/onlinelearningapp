@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
@@ -59,6 +61,18 @@ class _SignPageState extends State<SignPage> {
               ),
             ),
           ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(64, 16,63, 0),
+              child: Column(
+                children: [
+                  Text("Learn easy and fast with Studee", style: centerTextStyle),
+                  Text("Watch video learning anytime", style: centerTextStyle),
+                ],
+              ),
+            ),
+          ),
+          Center(child: TextButton(onPressed: (){}, child: Text("Sign In"),)),
         ],
       ),
     );
