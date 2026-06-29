@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onlinelearningapp/widgets/widget_tree.dart';
+import 'package:onlinelearningapp/widgets/sign_page.dart';
 
 void main() {
   runApp(const MyApp());
