@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
 
 class SignPage extends StatefulWidget {
   const SignPage({super.key});
@@ -35,7 +34,7 @@ class _SignPageState extends State<SignPage> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(69, 48, 68, 0),
+            padding: const EdgeInsets.fromLTRB(69, 48, 50, 0),
             child: RichText(
               text: TextSpan(
                 children: [
@@ -63,16 +62,24 @@ class _SignPageState extends State<SignPage> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(64, 16,63, 0),
+              padding: const EdgeInsets.fromLTRB(64, 16, 63, 0),
               child: Column(
                 children: [
-                  Text("Learn easy and fast with Studee", style: centerTextStyle),
+                  Text(
+                    "Learn easy and fast with Studee",
+                    style: centerTextStyle,
+                  ),
                   Text("Watch video learning anytime", style: centerTextStyle),
                 ],
               ),
             ),
           ),
-          Center(child: TextButton(onPressed: (){}, child: Text("Sign In"),)),
+          SignButton(myColor: Colors.white, myText: "Sign In", myHeight: 48),
+          SignButton(
+            myColor: Colors.white.withOpacity(0.4),
+            myText: "Sign Up",
+            myHeight: 16,
+          ),
         ],
       ),
     );
