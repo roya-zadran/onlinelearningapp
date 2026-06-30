@@ -72,13 +72,39 @@ class SignInPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      child: Text(
-                        "Username",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.black.withOpacity(0.6),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Username",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 24),
+                    TextButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        minimumSize: Size(327, 60),
+                        backgroundColor: Color(0xFFF0F4FD),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Password",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0,
+                          ),
                         ),
                       ),
                     ),
