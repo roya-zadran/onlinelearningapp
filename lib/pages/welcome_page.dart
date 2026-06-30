@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/pages/sign_in_page.dart';
 import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
 
 class SignPage extends StatefulWidget {
@@ -74,11 +75,35 @@ class _SignPageState extends State<SignPage> {
               ),
             ),
           ),
-          SignButton(myColor: Colors.white, myText: "Sign In", myHeight: 48),
+          SignButton(
+            myColor: Colors.white,
+            myText: "Sign In",
+            myHeight: 48,
+            map: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignInPage();
+                  },
+                ),
+              );
+            },
+          ),
           SignButton(
             myColor: Colors.white.withOpacity(0.4),
             myText: "Sign Up",
             myHeight: 16,
+            map: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignInPage();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),

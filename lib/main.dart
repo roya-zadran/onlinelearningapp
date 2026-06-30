@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onlinelearningapp/pages/sign_page.dart';
+import 'package:onlinelearningapp/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());

@@ -7,11 +7,13 @@ class SignButton extends StatelessWidget {
     required this.myColor,
     required this.myText,
     required this.myHeight,
+    required this.map,
   });
 
   final Color myColor;
   final String myText;
   final double myHeight;
+  final VoidCallback map;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class SignButton extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.fromLTRB(24, myHeight, 24, 0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: map,
           style: TextButton.styleFrom(
             backgroundColor: myColor,
             shape: RoundedRectangleBorder(
