@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/widgets/text_button_widget.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -9,27 +11,27 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackgroundColor,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: Image.asset("assets/images/circle.png"),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(59, 59, 57.78, 0),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Image.asset("assets/images/bg.png"),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Image.asset("assets/images/circle.png"),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 11),
-          Expanded(
-            child: Container(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(59, 59, 57.78, 0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: SvgPicture.asset("assets/images/bg.svg"),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 11),
+            Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -38,7 +40,6 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               width: double.infinity,
-              height: double.infinity,
               child: Padding(
                 padding: EdgeInsets.fromLTRB(24, 50, 24, 86),
                 child: Column(
@@ -63,57 +64,28 @@ class SignInPage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 24),
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                        minimumSize: Size(327, 60),
-                        backgroundColor: Color(0xFFF0F4FD),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Username",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0,
-                          ),
-                        ),
-                      ),
-                    ),
+                    TextButtonWidget(title: "Username"),
                     SizedBox(height: 24),
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                        minimumSize: Size(327, 60),
-                        backgroundColor: Color(0xFFF0F4FD),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
+                    TextButtonWidget(title: "Password"),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
                       child: Align(
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.centerRight,
                         child: Text(
-                          "Password",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0,
-                          ),
+                          "Forgot Password?",
+                          style: GoogleFonts.montserrat(fontSize: 14,
+                              fontWeight: FontWeight.w500, letterSpacing: 0,
+                              color: Color(0xFF2A2575),),
                         ),
                       ),
                     ),
+                    SizedBox(height: 24,),
                   ],
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -6,12 +6,14 @@ class SignButton extends StatelessWidget {
     super.key,
     required this.myColor,
     required this.myText,
+    required this.myTextColor,
     required this.myHeight,
     required this.map,
   });
 
   final Color myColor;
   final String myText;
+  final Color myTextColor;
   final double myHeight;
   final VoidCallback map;
 
@@ -29,7 +31,7 @@ class SignButton extends StatelessWidget {
             ),
             minimumSize: Size(double.infinity, 60),
           ),
-          child: Text(myText, style: TextStyle(color: Colors.black)),
+          child: Text(myText, style: TextStyle(color: myTextColor),),
         ),
       ),
     );

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/pages/sign_in_page.dart';
 import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
+
 
 class SignPage extends StatefulWidget {
   const SignPage({super.key});
@@ -29,7 +31,7 @@ class _SignPageState extends State<SignPage> {
                 padding: const EdgeInsets.fromLTRB(59, 59, 57.78, 0),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Image.asset("assets/images/bg.png"),
+                  child: SvgPicture.asset("assets/images/bg.svg"),
                 ),
               ),
             ],
@@ -78,6 +80,7 @@ class _SignPageState extends State<SignPage> {
           SignButton(
             myColor: Colors.white,
             myText: "Sign In",
+            myTextColor: Color(0xFF272323),
             myHeight: 48,
             map: () {
               Navigator.push(
@@ -93,6 +96,7 @@ class _SignPageState extends State<SignPage> {
           SignButton(
             myColor: Colors.white.withOpacity(0.4),
             myText: "Sign Up",
+            myTextColor: Color(0xFFFFFFFF),
             myHeight: 16,
             map: () {
               Navigator.push(
