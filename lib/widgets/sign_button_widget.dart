@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignButton extends StatelessWidget {
   const SignButton({
@@ -17,6 +18,7 @@ class SignButton extends StatelessWidget {
   final double myHeight;
   final VoidCallback map;
 
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -31,9 +33,13 @@ class SignButton extends StatelessWidget {
             ),
             minimumSize: Size(double.infinity, 60),
           ),
-          child: Text(myText, style: TextStyle(color: myTextColor),),
+          child: Text(myText, style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.bold,
+            fontSize: 14,
+            letterSpacing: 0,
+            color: myTextColor),
         ),
       ),
-    );
+    ));
   }
 }

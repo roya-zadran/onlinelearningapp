@@ -6,14 +6,14 @@ import 'package:onlinelearningapp/pages/sign_in_page.dart';
 import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
 
 
-class SignPage extends StatefulWidget {
-  const SignPage({super.key});
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key});
 
   @override
-  State<SignPage> createState() => _SignPageState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _SignPageState extends State<SignPage> {
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/pages/welcome_page.dart';
+import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
 import 'package:onlinelearningapp/widgets/text_button_widget.dart';
 
 class SignInPage extends StatelessWidget {
@@ -73,13 +75,44 @@ class SignInPage extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: Text(
                           "Forgot Password?",
-                          style: GoogleFonts.montserrat(fontSize: 14,
-                              fontWeight: FontWeight.w500, letterSpacing: 0,
-                              color: Color(0xFF2A2575),),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0,
+                            color: Color(0xFF2A2575),
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 24,),
+                    SizedBox(height: 24),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return WelcomePage();
+                            },
+                          ),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color(0xFF2A2575),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadiusGeometry.circular(12),
+                        ),
+                        minimumSize: Size(double.infinity, 60),
+                      ),
+                      child: Text(
+                        "Sign In",
+                        style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                          letterSpacing: 0,
+                          color: Color(0xFFFFFFFF),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
