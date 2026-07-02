@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/pages/home_page.dart';
 import 'package:onlinelearningapp/pages/welcome_page.dart';
-import 'package:onlinelearningapp/widgets/sign_button_widget.dart';
 import 'package:onlinelearningapp/widgets/text_button_widget.dart';
 
 class SignInPage extends StatelessWidget {
@@ -91,7 +91,7 @@ class SignInPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return WelcomePage();
+                              return HomePage();
                             },
                           ),
                         );
