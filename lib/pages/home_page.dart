@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(24, 41, 24, 0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,6 +25,8 @@ class _HomePageState extends State<HomePage> {
                 SvgPicture.asset("assets/images/profileIcon.svg"),
               ],
             ),
+            SizedBox(height: 24,),
+            Text("Hello, Jeje"),
           ],
         ),
       ),
