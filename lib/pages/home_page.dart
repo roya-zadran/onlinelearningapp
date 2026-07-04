@@ -12,35 +12,48 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFF0F4FD),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(24, 41, 24, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return LayoutBuilder(builder: (context, constraints) {
+      return FractionallySizedBox(
+        widthFactor: constraints.maxWidth > 500 ? 0.5: 1.0,
+        child: Scaffold(
+          backgroundColor: Color(0xFFF0F4FD),
+          body: Padding(
+            padding: const EdgeInsets.fromLTRB(24, 41, 24, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SvgPicture.asset("assets/images/menuIcon.svg"),
-                SvgPicture.asset("assets/images/profileIcon.svg"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset("assets/images/menuIcon.svg"),
+                    SvgPicture.asset("assets/images/profileIcon.svg"),
+                  ],
+                ),
+                SizedBox(height: 24),
+                Text(
+                  "Hello, Jeje",
+                  style: GoogleFonts.montserrat(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                    letterSpacing: 0,
+                    color: Color(0xFF272323),
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  "What do you want to learn?",
+                  style: GoogleFonts.montserrat(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    letterSpacing: 0,
+                    color: Color(0x80272323),
+                  ),
+                ),
               ],
             ),
-            SizedBox(height: 24),
-            Text(
-              "Hello, Jeje",
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.bold,
-                fontSize: 28,
-                letterSpacing: 0,
-                color: Color(0xFF272323),
-              ),
-            ),
-            SizedBox(height: 8,),
-            Text("What do you want to learn?", style: GoogleFonts.montserrat(fontWeight: FontWeight.w500, fontSize: 14, letterSpacing: 0, color: Color(0x80272323)),),
-          ],
+          ),
         ),
-      ),
-    );
+      );
+    },);
   }
 }
