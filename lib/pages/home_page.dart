@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,8 +26,18 @@ class _HomePageState extends State<HomePage> {
                 SvgPicture.asset("assets/images/profileIcon.svg"),
               ],
             ),
-            SizedBox(height: 24,),
-            Text("Hello, Jeje"),
+            SizedBox(height: 24),
+            Text(
+              "Hello, Jeje",
+              style: GoogleFonts.montserrat(
+                fontWeight: FontWeight.bold,
+                fontSize: 28,
+                letterSpacing: 0,
+                color: Color(0xFF272323),
+              ),
+            ),
+            SizedBox(height: 8,),
+            Text("What do you want to learn?", style: GoogleFonts.montserrat(fontWeight: FontWeight.w500, fontSize: 14, letterSpacing: 0, color: Color(0x80272323)),),
           ],
         ),
       ),
