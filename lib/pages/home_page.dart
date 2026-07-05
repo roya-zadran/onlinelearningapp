@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,18 +52,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(height: 32),
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search..",
-                      hintStyle: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 14,
-                        letterSpacing: 0,
-                        color: Color(0x4D272323),
-                      ),
-                      prefixIcon: Icon(Icons.search_rounded, color: Color(0x4D272323),size: 24,),
-                    ),
-                  ),
+                  TextFieldWidget(),
                 ],
               ),
             ),
@@ -72,3 +62,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+
