@@ -53,6 +53,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 32),
                   TextFieldWidget(),
+                  SizedBox(height: 36,),
+                  Card(
+                    color: Color(0xFF2A2575),
+                    child: Column(children: [
+                      SvgPicture.asset("assets/images/miniCircle.svg")
+                    ],),
+                  ),
                 ],
               ),
             ),
@@ -62,6 +69,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
