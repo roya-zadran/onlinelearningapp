@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 36),
                   Container(
                     width: double.infinity,
-                    height: 250,
+                    height: 180,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -72,37 +72,51 @@ class _HomePageState extends State<HomePage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("New Course!", style: GoogleFonts.montserrat(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  letterSpacing: 0,
-                                  color: Color(0xFFFFFFFF),
-                                ),),
-                                SizedBox(height: 8,),
-                                Text("User Experience Class", style: GoogleFonts.montserrat(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0,
-                                ),),
+                                Text(
+                                  "New Course!",
+                                  style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    letterSpacing: 0,
+                                    color: Color(0xFFFFFFFF),
+                                  ),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  "User Experience Class",
+                                  style: GoogleFonts.montserrat(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 0,
+                                  ),
+                                ),
                                 SizedBox(height: 16),
-                                TextButton(onPressed: () {},
-                                    style: TextButton.styleFrom(
-                                      backgroundColor: Color(0xBFC983DE),
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8),),
+                                TextButton(
+                                  onPressed: () {},
+                                  style: TextButton.styleFrom(
+                                   minimumSize: Size(82, 25),
+                                    backgroundColor: Color(0xBFC983DE),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
                                     ),
-                                    child: Text("See Class", style: GoogleFonts.montserrat(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0,
-                                ),)),
+                                  ),
+                                  child: Text(
+                                    "See Class",
+                                    style: GoogleFonts.montserrat(
+                                      color: Color(0xFFFFFFFF),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: 0,
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
                           Stack(
                             children: [
-                              SvgPicture.asset("assets/images/miniCircle.svg"),
+                              SvgPicture.asset("assets/images/miniCircle.svg", height: 84,),
                               SvgPicture.asset("assets/images/miniProfile.svg"),
                             ],
                           ),
