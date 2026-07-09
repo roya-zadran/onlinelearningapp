@@ -15,3 +15,18 @@ class AppColors {
    height: 1.6,
    color: AppColors.whiteColor
  );
+final TextStyle middleTextStyle = GoogleFonts.montserrat(
+      color: Color(0xFFFFFFFF),
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0,
+);
+ class miniCardButtonStyle {
+  static final TextButtonStyle = TextButton.styleFrom(
+     minimumSize: Size(82, 25),
+     backgroundColor: Color(0xBFC983DE),
+     shape: RoundedRectangleBorder(
+       borderRadius: BorderRadius.circular(8),
+     ),
+   );
+ }

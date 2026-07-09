@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -56,8 +57,9 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 36),
                   Container(
                     width: double.infinity,
-                    height: 180,
+                    height: 130,
                     child: Card(
+                      margin: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -69,54 +71,42 @@ class _HomePageState extends State<HomePage> {
                               horizontal: 24,
                               vertical: 20,
                             ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "New Course!",
-                                  style: GoogleFonts.montserrat(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    letterSpacing: 0,
-                                    color: Color(0xFFFFFFFF),
-                                  ),
-                                ),
-                                SizedBox(height: 8),
-                                Text(
-                                  "User Experience Class",
-                                  style: GoogleFonts.montserrat(
-                                    color: Color(0xFFFFFFFF),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500,
-                                    letterSpacing: 0,
-                                  ),
-                                ),
-                                SizedBox(height: 16),
-                                TextButton(
-                                  onPressed: () {},
-                                  style: TextButton.styleFrom(
-                                   minimumSize: Size(82, 25),
-                                    backgroundColor: Color(0xBFC983DE),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                  ),
-                                  child: Text(
-                                    "See Class",
+                            child: Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "New Course!",
                                     style: GoogleFonts.montserrat(
-                                      color: Color(0xFFFFFFFF),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
                                       letterSpacing: 0,
+                                      color: Color(0xFFFFFFFF),
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(height: 8),
+                                  Text(
+                                    "User Experience Class",
+                                    style: middleTextStyle,
+                                  ),
+                                  SizedBox(height: 16),
+                                  TextButton(
+                                    onPressed: () {},
+                                    style: miniCardButtonStyle.TextButtonStyle,
+                                    child: Text(
+                                      "See Class",
+                                      style: middleTextStyle,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           Stack(
+                            clipBehavior: Clip.none,
+                            alignment: Alignment.topRight,
                             children: [
-                              SvgPicture.asset("assets/images/miniCircle.svg", height: 84,),
+                              SvgPicture.asset("assets/images/miniCircle.svg"),
                               SvgPicture.asset("assets/images/miniProfile.svg"),
                             ],
                           ),
@@ -133,3 +123,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
