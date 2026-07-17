@@ -57,63 +57,80 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 36),
                   Container(
                     width: double.infinity,
-                    height: 130,
+                    height: 150,
                     child: Card(
                       margin: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
-                      color: Color(0xFF2A2575),
-                      child: Row(
+                      color: const Color(0xFF2A2575),
+                      child: Stack(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 24,
-                              vertical: 20,
-                            ),
-                            child: Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "New Course!",
-                                    style: GoogleFonts.montserrat(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      letterSpacing: 0,
-                                      color: Color(0xFFFFFFFF),
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "User Experience Class",
-                                    style: middleTextStyle,
-                                  ),
-                                  SizedBox(height: 16),
-                                  TextButton(
-                                    onPressed: () {},
-                                    style: miniCardButtonStyle.TextButtonStyle,
-                                    child: Text(
-                                      "See Class",
-                                      style: middleTextStyle,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Stack(
-                            clipBehavior: Clip.none,
-                            alignment: Alignment.topRight,
+                          Row(
                             children: [
-                              SvgPicture.asset("assets/images/miniCircle.svg"),
-                              SvgPicture.asset("assets/images/miniProfile.svg"),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                    vertical: 20,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "New Course!",
+                                        style: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Text(
+                                        "User Experience Class",
+                                        style: middleTextStyle,
+                                      ),
+                                      const SizedBox(height:3),
+                                      TextButton(
+                                        onPressed: () {},
+                                        style: miniCardButtonStyle.TextButtonStyle,
+                                        child: Text(
+                                          "See Class",
+                                          style: middleTextStyle,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
+                          ),
+
+                          Positioned(
+                            top: 0,
+                            right: 0,
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/images/miniCircle.svg",
+                                ),
+                                Positioned(
+                                  top: 23,
+                                  right: 1.05,
+                                  width: 152,
+                                  height: 84,
+                                  child: SvgPicture.asset(
+                                    "assets/images/miniProfile.svg",
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),

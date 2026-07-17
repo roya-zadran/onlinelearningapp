@@ -23,7 +23,11 @@ final TextStyle middleTextStyle = GoogleFonts.montserrat(
 );
  class miniCardButtonStyle {
   static final TextButtonStyle = TextButton.styleFrom(
-     minimumSize: Size(82, 25),
+minimumSize: Size(82, 25),
+     padding: const EdgeInsets.symmetric(
+       horizontal: 6,
+       vertical: 3,
+     ),
      backgroundColor: Color(0xBFC983DE),
      shape: RoundedRectangleBorder(
        borderRadius: BorderRadius.circular(8),
