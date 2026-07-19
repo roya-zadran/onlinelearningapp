@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Positioned(
                                   top: 23,
-                                  right: 1.05,
+                                  right:1,
                                   width: 152,
                                   height: 84,
                                   child: SvgPicture.asset(
