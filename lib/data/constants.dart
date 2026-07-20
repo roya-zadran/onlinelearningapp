@@ -74,6 +74,17 @@ final TextStyle kTextSpanStyle2 = GoogleFonts.montserrat(
   fontSize: 64,
   letterSpacing: 0,
 );
+final TextStyle kCourseLabelStyle = GoogleFonts.montserrat(
+fontWeight: FontWeight.bold,
+  fontSize: 20,
+  letterSpacing: 0,
+);
+final kViewAllLabelStyle = GoogleFonts.montserrat(
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+  color: Colors.black.withOpacity(0.5),
+
+);
 class miniCardButtonStyle {
   static final TextButtonStyle = TextButton.styleFrom(
     minimumSize: Size(82, 25),

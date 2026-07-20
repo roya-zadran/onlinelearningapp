@@ -32,15 +32,9 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   SizedBox(height: 24),
-                  Text(
-                    "Hello, Jeje",
-                    style: studentNameStyle
-                  ),
+                  Text("Hello, Jeje", style: studentNameStyle),
                   SizedBox(height: 8),
-                  Text(
-                    "What do you want to learn?",
-                    style: questionIntroStyle
-                  ),
+                  Text("What do you want to learn?", style: questionIntroStyle),
                   SizedBox(height: 32),
                   TextFieldWidget(),
                   SizedBox(height: 36),
@@ -64,16 +58,13 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "New Course!",
-                                    style: kLabelInCardStyle
-                                  ),
+                                  Text("New Course!", style: kLabelInCardStyle),
                                   const SizedBox(height: 8),
                                   Text(
                                     "User Experience Class",
                                     style: middleTextStyle,
                                   ),
-                                  const SizedBox(height:3),
+                                  const SizedBox(height: 3),
                                   TextButton(
                                     onPressed: () {},
                                     style: miniCardButtonStyle.TextButtonStyle,
@@ -98,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Positioned(
                                   top: 30,
-                                  right:1,
+                                  right: 1,
                                   width: 152,
                                   height: 84,
                                   child: SvgPicture.asset(
@@ -111,7 +102,16 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(height: 32),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Course", style: kCourseLabelStyle),
+                      Text("View All", style: kViewAllLabelStyle),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
                 ],
               ),
             ),
@@ -121,5 +121,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
