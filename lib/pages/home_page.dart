@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
@@ -21,7 +20,7 @@ class _HomePageState extends State<HomePage> {
           child: Scaffold(
             backgroundColor: Color(0xFFF0F4FD),
             body: Padding(
-              padding: const EdgeInsets.fromLTRB(24, 41, 24, 0),
+              padding: const EdgeInsets.fromLTRB(24, 45, 24, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -35,22 +34,12 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 24),
                   Text(
                     "Hello, Jeje",
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28,
-                      letterSpacing: 0,
-                      color: Color(0xFF272323),
-                    ),
+                    style: studentNameStyle
                   ),
                   SizedBox(height: 8),
                   Text(
                     "What do you want to learn?",
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14,
-                      letterSpacing: 0,
-                      color: Color(0x80272323),
-                    ),
+                    style: questionIntroStyle
                   ),
                   SizedBox(height: 32),
                   TextFieldWidget(),
@@ -66,46 +55,37 @@ class _HomePageState extends State<HomePage> {
                       color: const Color(0xFF2A2575),
                       child: Stack(
                         children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                    vertical: 20,
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "New Course!",
-                                        style: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      Text(
-                                        "User Experience Class",
-                                        style: middleTextStyle,
-                                      ),
-                                      const SizedBox(height:3),
-                                      TextButton(
-                                        onPressed: () {},
-                                        style: miniCardButtonStyle.TextButtonStyle,
-                                        child: Text(
-                                          "See Class",
-                                          style: middleTextStyle,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 20,
                               ),
-                            ],
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "New Course!",
+                                    style: kLabelInCardStyle
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    "User Experience Class",
+                                    style: middleTextStyle,
+                                  ),
+                                  const SizedBox(height:3),
+                                  TextButton(
+                                    onPressed: () {},
+                                    style: miniCardButtonStyle.TextButtonStyle,
+                                    child: Text(
+                                      "See Class",
+                                      style: middleTextStyle,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
-
                           Positioned(
                             top: 0,
                             right: 0,
@@ -113,10 +93,11 @@ class _HomePageState extends State<HomePage> {
                               clipBehavior: Clip.none,
                               children: [
                                 SvgPicture.asset(
+                                  height: 120,
                                   "assets/images/miniCircle.svg",
                                 ),
                                 Positioned(
-                                  top: 23,
+                                  top: 30,
                                   right:1,
                                   width: 152,
                                   height: 84,

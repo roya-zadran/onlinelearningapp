@@ -46,21 +46,11 @@ class _WelcomePageState extends State<WelcomePage> {
                       children: [
                         TextSpan(
                           text: "Stud",
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.whiteColor,
-                            fontSize: 64,
-                            letterSpacing: 0,
-                          ),
+                          style: kTextSpanStyle1,
                         ),
                         TextSpan(
                           text: "ee",
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFFC983DE),
-                            fontSize: 64,
-                            letterSpacing: 0,
-                          ),
+                          style: kTextSpanStyle2,
                         ),
                       ],
                     ),

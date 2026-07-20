@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/pages/home_page.dart';
 import 'package:onlinelearningapp/widgets/text_button_widget.dart';
@@ -36,13 +35,7 @@ class SignInPage extends StatelessWidget {
                 ),
                 SizedBox(height: 11),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25),
-                    ),
-                  ),
+                  decoration: ContainerDecoration.myContainer,
                   width: double.infinity,
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(24, 50, 24, 86),
@@ -51,21 +44,12 @@ class SignInPage extends StatelessWidget {
                       children: [
                         Text(
                           "Hello,",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0,
-                          ),
+                          style: kGreetingTextStyle,
                         ),
                         SizedBox(height: 8),
                         Text(
                           "Welcome Back",
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 28,
-                            letterSpacing: 0,
-                          ),
+                          style: kWelcomeLabelTextStyle,
                         ),
                         SizedBox(height: 24),
                         TextButtonWidget(title: "Username"),
@@ -77,12 +61,7 @@ class SignInPage extends StatelessWidget {
                             alignment: Alignment.centerRight,
                             child: Text(
                               "Forgot Password?",
-                              style: GoogleFonts.montserrat(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 0,
-                                color: Color(0xFF2A2575),
-                              ),
+                              style: kForgotTextStyle,
                             ),
                           ),
                         ),
@@ -98,21 +77,10 @@ class SignInPage extends StatelessWidget {
                               ),
                             );
                           },
-                          style: TextButton.styleFrom(
-                            backgroundColor: Color(0xFF2A2575),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadiusGeometry.circular(12),
-                            ),
-                            minimumSize: Size(double.infinity, 60),
-                          ),
+                          style: AppButtonStyle.myButton,
                           child: Text(
                             "Sign In",
-                            style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                              letterSpacing: 0,
-                              color: Color(0xFFFFFFFF),
-                            ),
+                            style: kSignInTextStyle,
                           ),
                         ),
                       ],
