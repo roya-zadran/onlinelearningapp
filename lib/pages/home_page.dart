@@ -3,6 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
+import '../data/notifier.dart';
+
+int onTap = 0;
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -108,10 +112,98 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Course", style: kCourseLabelStyle),
-                      Text("View All", style: kViewAllLabelStyle),
+                      Text("View All", style: RowButtons.kUnabledTextColor),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 40,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Expanded(
+                          child: ValueListenableBuilder(
+                            valueListenable: textButtonColorChangeNotifier,
+                            builder: (context, onTap, child) {
+                              return TextButton(
+                                onPressed: () {
+                                  textButtonColorChangeNotifier.value =0;
+                                },
+                                style: onTap == 0
+                                    ? RowButtons.kEnabledButtonStyle
+                                    : RowButtons.kUnabledButtonStyle,
+                                child: Text(
+                                  "All",
+                                  style: onTap == 0
+                                      ? RowButtons.kEnabledTextColor
+                                      : RowButtons.kUnabledTextColor,
+                                ),
+                              );
+                            },
+                          ),
+                        ),                        Expanded(
+                          child: ValueListenableBuilder(
+                            valueListenable: textButtonColorChangeNotifier,
+                            builder: (context, onTap, child) {
+                              return TextButton(
+                                onPressed: () {
+                                  textButtonColorChangeNotifier.value = 1;
+                                },
+                                style: onTap == 1
+                                    ? RowButtons.kEnabledButtonStyle
+                                    : RowButtons.kUnabledButtonStyle,
+                                child: Text(
+                                  "Design",
+                                  style: onTap == 1
+                                      ? RowButtons.kEnabledTextColor
+                                      : RowButtons.kUnabledTextColor,
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: ValueListenableBuilder(
+                            valueListenable: textButtonColorChangeNotifier,
+                            builder: (context, onTap, child) {
+                              return TextButton(
+                                onPressed: () {
+                                  textButtonColorChangeNotifier.value =2;
+                                },
+                                style: onTap == 2
+                                    ? RowButtons.kEnabledButtonStyle
+                                    : RowButtons.kUnabledButtonStyle,
+                                child: Text(
+                                  "Programming",
+                                  style: onTap == 2
+                                      ? RowButtons.kEnabledTextColor
+                                      : RowButtons.kUnabledTextColor,
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: ValueListenableBuilder(
+                            valueListenable: textButtonColorChangeNotifier,
+                            builder: (context, onTap, child) {
+                              return TextButton(
+                                onPressed: () {
+                                  textButtonColorChangeNotifier.value = 3;
+                                },
+                                style: onTap == 3
+                                    ? RowButtons.kEnabledButtonStyle
+                                    : RowButtons.kUnabledButtonStyle,
+                                child: Text("UI/UX",  style: onTap == 3
+                                    ? RowButtons.kEnabledTextColor
+                                    : RowButtons.kUnabledTextColor, ),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -75,16 +75,11 @@ final TextStyle kTextSpanStyle2 = GoogleFonts.montserrat(
   letterSpacing: 0,
 );
 final TextStyle kCourseLabelStyle = GoogleFonts.montserrat(
-fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.bold,
   fontSize: 20,
   letterSpacing: 0,
 );
-final kViewAllLabelStyle = GoogleFonts.montserrat(
-  fontWeight: FontWeight.w500,
-  fontSize: 14,
-  color: Colors.black.withOpacity(0.5),
 
-);
 class miniCardButtonStyle {
   static final TextButtonStyle = TextButton.styleFrom(
     minimumSize: Size(82, 25),
@@ -93,7 +88,8 @@ class miniCardButtonStyle {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
   );
 }
- class AppButtonStyle {
+
+class AppButtonStyle {
   static final ButtonStyle myButton = TextButton.styleFrom(
     backgroundColor: Color(0xFF2A2575),
     shape: RoundedRectangleBorder(
@@ -101,8 +97,9 @@ class miniCardButtonStyle {
     ),
     minimumSize: Size(double.infinity, 60),
   );
- }
- class ContainerDecoration {
+}
+
+class ContainerDecoration {
   static BoxDecoration myContainer = BoxDecoration(
     color: Colors.white,
     borderRadius: BorderRadius.only(
@@ -110,4 +107,33 @@ class miniCardButtonStyle {
       topRight: Radius.circular(25),
     ),
   );
- }
+}
+
+class RowButtons {
+  static TextStyle kUnabledTextColor = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: Colors.black.withOpacity(0.5),
+  );
+  static TextStyle kEnabledTextColor = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: Colors.white,
+  );
+  static ButtonStyle kEnabledButtonStyle = TextButton.styleFrom(
+    padding: EdgeInsets.all(8),
+    minimumSize: Size(68.9, 25),
+    backgroundColor: Color(0xFF2A2575),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadiusGeometry.circular(16),
+    ),
+  );
+  static ButtonStyle kUnabledButtonStyle = TextButton.styleFrom(
+    padding: EdgeInsets.all(8),
+    minimumSize: Size(68.9, 25),
+    backgroundColor: Color(0xFFF0F4FD),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadiusGeometry.circular(16),
+    ),
+  );
+}
