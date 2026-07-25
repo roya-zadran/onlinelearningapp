@@ -5,8 +5,6 @@ import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/widgets/mini_row_buttons_widgets.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
-import '../data/notifier.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -166,6 +164,7 @@ class _HomePageState extends State<HomePage> {
                                   vertical: 11,
                                 ),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "Photoshop Course",
@@ -175,8 +174,30 @@ class _HomePageState extends State<HomePage> {
                                         color: Color(0xFF272323),
                                       ),
                                     ),
-                                    SizedBox(height: 2,),
-                                    Row(children: [  Icon(Icons.star, color: Color(0xFFFFD600),),],),
+                                    SizedBox(height: 2),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Color(0xFFFFD600),
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          "5.0",
+                                          style: RowButtons.kUnabledTextColor,
+                                        ),
+                                        SizedBox(width: 24),
+                                        Icon(
+                                          Icons.access_time_filled_rounded,
+                                          color: Color(0xFF272323),
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          '5h 15m',
+                                          style: RowButtons.kUnabledTextColor,
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ),
