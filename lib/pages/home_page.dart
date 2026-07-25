@@ -122,7 +122,9 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         MiniRowButtonWidget(myText: "All", myValue: 0),
                         MiniRowButtonWidget(myText: "Design", myValue: 1),
+
                         MiniRowButtonWidget(myText: "Programming", myValue: 2),
+
                         MiniRowButtonWidget(myText: "UI/UX", myValue: 3),
                       ],
                     ),

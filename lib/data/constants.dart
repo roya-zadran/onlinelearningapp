@@ -112,17 +112,17 @@ class ContainerDecoration {
 class RowButtons {
   static TextStyle kUnabledTextColor = GoogleFonts.montserrat(
     fontWeight: FontWeight.w500,
-    fontSize: 14,
+    fontSize: 13,
     color: Colors.black.withOpacity(0.5),
   );
   static TextStyle kEnabledTextColor = GoogleFonts.montserrat(
     fontWeight: FontWeight.w500,
-    fontSize: 14,
+    fontSize: 13,
     color: Colors.white,
   );
   static ButtonStyle kEnabledButtonStyle = TextButton.styleFrom(
     padding: EdgeInsets.all(8),
-    minimumSize: Size(68.9, 25),
+    minimumSize: Size(60, 20),
     backgroundColor: Color(0xFF2A2575),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadiusGeometry.circular(16),
