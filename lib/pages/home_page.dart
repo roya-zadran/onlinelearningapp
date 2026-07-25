@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/widgets/mini_card_widget.dart';
 import 'package:onlinelearningapp/widgets/mini_row_buttons_widgets.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
 
@@ -140,71 +141,18 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     SizedBox(height: 32),
-                    Card(
-                      elevation: 0,
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(16),
-                      ),
-                      child: Container(
-                        height: 100,
-                        width: double.infinity,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/images/miniCamera.svg",
-                                width: 62,
-                                height: 62,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 24,
-                                  vertical: 11,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Photoshop Course",
-                                      style: GoogleFonts.montserrat(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 14,
-                                        color: Color(0xFF272323),
-                                      ),
-                                    ),
-                                    SizedBox(height: 2),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.star,
-                                          color: Color(0xFFFFD600),
-                                        ),
-                                        SizedBox(width: 8),
-                                        Text(
-                                          "5.0",
-                                          style: RowButtons.kUnabledTextColor,
-                                        ),
-                                        SizedBox(width: 24),
-                                        Icon(
-                                          Icons.access_time_filled_rounded,
-                                          color: Color(0xFF272323),
-                                        ),
-                                        SizedBox(width: 8),
-                                        Text(
-                                          '5h 15m',
-                                          style: RowButtons.kUnabledTextColor,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                    miniCardWidget(
+                      assetImage: 'assets/images/miniCamera.svg',
+                      myTitle: "Photoshop Course",
+                      myRate: "5.0",
+                      myTime: "5h 15m",
+                    ),
+                    SizedBox(height: 32),
+                    miniCardWidget(
+                      assetImage: 'assets/images/pk.svg',
+                      myTitle: "3D Design",
+                      myRate: "4.6",
+                      myTime: "10h 30m",
                     ),
                   ],
                 ),
