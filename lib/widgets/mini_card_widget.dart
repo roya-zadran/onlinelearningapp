@@ -20,57 +20,59 @@ class miniCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadiusGeometry.circular(16),
+    return ElevatedButton(
+      onPressed: (){},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        elevation: 0,
+
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16),)
       ),
       child: Container(
-        height: 100,
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Row(
-            children: [
-              SvgPicture.asset(assetImage, width: 62, height: 62),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 11,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      myTitle,
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Color(0xFF272323),
-                      ),
-                    ),
-                    SizedBox(height: 2),
-                    Row(
-                      children: [
-                        Icon(Icons.star, color: Color(0xFFFFD600)),
-                        SizedBox(width: 6),
-                        Text(myRate, style: RowButtons.kUnabledTextColor),
-                        SizedBox(width: 24),
-                        Icon(
-                          Icons.access_time_filled_rounded,
+          height: 100,
+          width: double.infinity,
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: [
+                SvgPicture.asset(assetImage, width: 62, height: 62),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 11,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        myTitle,
+                        style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
                           color: Color(0xFF272323),
                         ),
-                        SizedBox(width: 6),
-                        Text(myTime, style: RowButtons.kUnabledTextColor),
-                      ],
-                    ),
-                  ],
+                      ),
+                      SizedBox(height: 2),
+                      Row(
+                        children: [
+                          Icon(Icons.star, color: Color(0xFFFFD600)),
+                          SizedBox(width: 6),
+                          Text(myRate, style: RowButtons.kUnabledTextColor),
+                          SizedBox(width: 24),
+                          Icon(
+                            Icons.access_time_filled_rounded,
+                            color: Color(0xFF272323),
+                          ),
+                          SizedBox(width: 6),
+                          Text(myTime, style: RowButtons.kUnabledTextColor),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
       ),
     );
   }

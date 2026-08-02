@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
 import 'package:onlinelearningapp/widgets/mini_card_widget.dart';
 import 'package:onlinelearningapp/widgets/mini_row_buttons_widgets.dart';
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
           child: Scaffold(
             backgroundColor: Color(0xFFF0F4FD),
             body: Padding(
-              padding: const EdgeInsets.fromLTRB(24, 45, 24, 0),
+              padding:EdgeInsets.fromLTRB(24.w, 45.h, 24.w, 0.h),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,32 +35,32 @@ class _HomePageState extends State<HomePage> {
                         SvgPicture.asset("assets/images/profileIcon.svg"),
                       ],
                     ),
-                    SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                     Text("Hello, Jeje", style: studentNameStyle),
-                    SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     Text(
                       "What do you want to learn?",
                       style: questionIntroStyle,
                     ),
-                    SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     TextFieldWidget(),
-                    SizedBox(height: 36),
+                    SizedBox(height: 36.h),
                     Container(
                       width: double.infinity,
-                      height: 150,
+                      height: 155.h,
                       child: Card(
                         margin: EdgeInsets.zero,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                         ),
                         color: const Color(0xFF2A2575),
                         child: Stack(
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 24,
-                                  vertical: 20,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 24.w,
+                                  vertical: 20.h,
                                 ),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,19 +69,21 @@ class _HomePageState extends State<HomePage> {
                                       "New Course!",
                                       style: kLabelInCardStyle,
                                     ),
-                                    const SizedBox(height: 8),
+                                   SizedBox(height: 8.h),
                                     Text(
                                       "User Experience Class",
                                       style: middleTextStyle,
                                     ),
-                                    const SizedBox(height: 3),
+                                     SizedBox(height: 3.h),
                                     TextButton(
                                       onPressed: () {},
                                       style:
                                           miniCardButtonStyle.TextButtonStyle,
-                                      child: Text(
-                                        "See Class",
-                                        style: middleTextStyle,
+                                      child: Expanded(
+                                        child: Text(
+                                          "See Class",
+                                          style: middleTextStyle,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -89,20 +91,20 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Positioned(
-                              top: 0,
-                              right: 0,
+                              top: 0.h,
+                              right: 0.w,
                               child: Stack(
                                 clipBehavior: Clip.none,
                                 children: [
                                   SvgPicture.asset(
-                                    height: 120,
+                                    height: 120.h,
                                     "assets/images/miniCircle.svg",
                                   ),
                                   Positioned(
-                                    top: 30,
-                                    right: 1,
-                                    width: 152,
-                                    height: 84,
+                                    top: 30.h,
+                                    right: 1.w,
+                                    width: 152.w,
+                                    height: 84.h,
                                     child: SvgPicture.asset(
                                       "assets/images/miniProfile.svg",
                                     ),
@@ -114,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -122,9 +124,9 @@ class _HomePageState extends State<HomePage> {
                         Text("View All", style: RowButtons.kUnabledTextColor),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     SizedBox(
-                      height: 40,
+                      height: 40.h,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
@@ -140,20 +142,28 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     miniCardWidget(
                       assetImage: 'assets/images/miniCamera.svg',
                       myTitle: "Photoshop Course",
                       myRate: "5.0",
                       myTime: "5h 15m",
                     ),
-                    SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     miniCardWidget(
                       assetImage: 'assets/images/pk.svg',
                       myTitle: "3D Design",
                       myRate: "4.6",
                       myTime: "10h 30m",
                     ),
+                    SizedBox(height: 32.h),
+                    miniCardWidget(
+                      assetImage: 'assets/images/pk.svg',
+                      myTitle: "User Experience",
+                      myRate: "5.0",
+                      myTime: "13h 30m",
+                    ),
+                    SizedBox(height: 32.h),
                   ],
                 ),
               ),
