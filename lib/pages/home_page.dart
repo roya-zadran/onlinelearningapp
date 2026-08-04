@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                                     TextButton(
                                       onPressed: () {},
                                       style:
-                                          miniCardButtonStyle.TextButtonStyle,
+                                      miniCardButtonStyle.TextButtonStyle,
                                       child: Expanded(
                                         child: Text(
                                           "See Class",
