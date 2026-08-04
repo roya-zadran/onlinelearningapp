@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/pages/course_page.dart';
 import 'package:onlinelearningapp/widgets/mini_card_widget.dart';
 import 'package:onlinelearningapp/widgets/mini_row_buttons_widgets.dart';
 import 'package:onlinelearningapp/widgets/textfield_widget.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
           child: Scaffold(
             backgroundColor: Color(0xFFF0F4FD),
             body: Padding(
-              padding:EdgeInsets.fromLTRB(24.w, 45.h, 24.w, 0.h),
+              padding: EdgeInsets.fromLTRB(24.w, 45.h, 24.w, 0.h),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,12 +70,12 @@ class _HomePageState extends State<HomePage> {
                                       "New Course!",
                                       style: kLabelInCardStyle,
                                     ),
-                                   SizedBox(height: 8.h),
+                                    SizedBox(height: 8.h),
                                     Text(
                                       "User Experience Class",
                                       style: middleTextStyle,
                                     ),
-                                     SizedBox(height: 3.h),
+                                    SizedBox(height: 3.h),
                                     TextButton(
                                       onPressed: () {},
                                       style:
@@ -144,6 +145,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 32.h),
                     miniCardWidget(
+                      onPressed:  () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CoursePage()),
+                        );
+                      },
                       assetImage: 'assets/images/miniCamera.svg',
                       myTitle: "Photoshop Course",
                       myRate: "5.0",
@@ -151,6 +158,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 32.h),
                     miniCardWidget(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CoursePage()),
+                        );
+                      },
                       assetImage: 'assets/images/pk.svg',
                       myTitle: "3D Design",
                       myRate: "4.6",
@@ -158,6 +171,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 32.h),
                     miniCardWidget(
+                      onPressed:  () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CoursePage()),
+                        );
+                      },
                       assetImage: 'assets/images/pk.svg',
                       myTitle: "User Experience",
                       myRate: "5.0",

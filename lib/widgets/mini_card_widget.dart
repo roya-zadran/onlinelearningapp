@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onlinelearningapp/data/constants.dart';
+import 'package:onlinelearningapp/pages/course_page.dart';
 
 class miniCardWidget extends StatelessWidget {
   final String assetImage;
   final String myTitle;
   final String myRate;
   final String myTime;
+  final VoidCallback onPressed;
 
   const miniCardWidget({
     super.key,
@@ -15,17 +17,20 @@ class miniCardWidget extends StatelessWidget {
     required this.myTitle,
     required this.myRate,
     required this.myTime,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.white,
         elevation: 0,
         padding: EdgeInsets.zero,
-
+        shadowColor: Colors.transparent,
+        surfaceTintColor: Colors.grey,
+        overlayColor: Colors.grey.withOpacity(0.08),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       child: Container(
